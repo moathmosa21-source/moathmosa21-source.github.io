@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>اتصال · أثر العقارية</title>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0d3a33;color:#e8efea;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;text-align:center;padding:24px;box-sizing:border-box}
+main{width:100%;max-width:360px}
+.n{font-size:30px;direction:ltr;margin:12px 0 24px;font-family:ui-monospace,Menlo,monospace}
+a{display:block;background:#b5875a;color:#1d1307;text-decoration:none;font-weight:700;font-size:20px;padding:16px;border-radius:14px}
+p{color:#9fb8ae;font-size:14px;margin-top:18px}
+</style>
+</head>
+<body>
+<main>
+<div>أثر العقارية</div>
+<div class="n" id="n"></div>
+<a id="c" href="#">اتصال</a>
+<p>بعد المكالمة ارجع لنظام أثر وسجّل النتيجة.</p>
+</main>
+<script>
+var d=(location.hash||'').replace(/[^0-9+]/g,'');
+document.getElementById('n').textContent=d||'لا يوجد رقم';
+var c=document.getElementById('c');
+if(d){c.href='tel:'+d;location.href='tel:'+d}else{c.style.display='none'}
+</script>
+</body>
+</html>
